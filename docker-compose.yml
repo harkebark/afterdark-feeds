@@ -1,0 +1,26 @@
+services:
+  app:
+    image: mcr.microsoft.com/devcontainers/typescript-node:20
+    volumes:
+      - .:/workspaces/app:cached
+    command: sleep infinity
+    environment:
+      FEEDGEN_POSTGRES_CONNECTION_STRING: postgres://feedgen:feedgen@db:5432/feedgen
+      FEEDGEN_POSTGRES_SSL: "false"
+    depends_on:
+      - db
+    ports:
+      - "3000:3000"
+
+  db:
+    image: postgres:16
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: feedgen
+      POSTGRES_PASSWORD: feedgen
+      POSTGRES_DB: feedgen
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:

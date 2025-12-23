@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "lib": [
+      "ES2022",
+    ],
+    "outDir": "./dist",
+    "module": "ESNext",
+    "target": "ESNext",
+    "esModuleInterop": true,
+    "moduleResolution": "Node",
+    "alwaysStrict": true,
+    "allowUnreachableCode": false,
+    "strictNullChecks": true,
+    "skipLibCheck": true
+  },
+  "tsc-alias": {
+    "resolveFullPaths": true,
+    "verbose": false
+  },
+  "include": ["./src/**/*.ts"],
+  "exclude": [
+    "node_modules", "dist"
+  ]
+}
