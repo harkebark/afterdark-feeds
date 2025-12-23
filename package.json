@@ -52,7 +52,7 @@
     "@types/express": "^4.17.21",
     "@types/node": "^20.11.28",
     "@types/pg": "^8.11.10",
-    "tsc-alias": "1.8.10",
+    "tsc-alias": "1.8.16",
     "tsx": "^4.7.1",
     "typescript": "^5.4.2"
   }
